@@ -1,0 +1,431 @@
+Started GET "/" for ::1 at 2017-04-28 08:37:10 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (18.0ms)
+Completed 200 OK in 1132ms (Views: 973.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (101.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (89.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJobs (20170428030819)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_name" varchar, "job_title" varchar, "job_description" text, "salary" integer, "location" varchar, "contact_email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170428030819"]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-28 03:09:01 UTC], ["updated_at", 2017-04-28 03:09:01 UTC]]
+  [1m[35m (92.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-04-28 08:40:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (50.0ms)
+Completed 500 Internal Server Error in 2461ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    4:     <title>EasyJobs</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__321107155_27986976'
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (3425.2ms)
+Started GET "/jobs" for ::1 at 2017-04-28 08:42:25 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (36.0ms)
+Completed 500 Internal Server Error in 26702ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    4:     <title>EasyJobs</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__321107155_73802772'
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby23/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7626.4ms)
+Started GET "/" for ::1 at 2017-04-28 08:46:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 904ms (Views: 810.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/jobs/new" for ::1 at 2017-04-28 08:47:14 +0530
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (155.0ms)
+  Rendered jobs/new.html.erb within layouts/application (206.0ms)
+Completed 200 OK in 469ms (Views: 406.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/jobs" for ::1 at 2017-04-28 08:48:04 +0530
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yNg1tcT4wOuIsV2HCsQUJ8PiDSMZOUFJ002CpFvyzcC0OMkFD5qOqwSkeyiq/TKDGE7y4zoQjHomj1xs89HMyg==", "job"=>{"company_name"=>"Governament of Karnataka", "job_title"=>"Assistant Engineer", "job_description"=>"Civil Engineer Post", "salary"=>"25000", "location"=>"karnataka", "contact_email"=>"kpsc.kar.nic.in"}, "commit"=>"Create Job"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "jobs" ("company_name", "job_title", "job_description", "salary", "location", "contact_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_name", "Governament of Karnataka"], ["job_title", "Assistant Engineer"], ["job_description", "Civil Engineer Post"], ["salary", 25000], ["location", "karnataka"], ["contact_email", "kpsc.kar.nic.in"], ["created_at", 2017-04-28 03:18:04 UTC], ["updated_at", 2017-04-28 03:18:04 UTC]]
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 95ms (ActiveRecord: 87.0ms)
+
+
+Started GET "/jobs/1" for ::1 at 2017-04-28 08:48:05 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 269ms (Views: 195.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:48:11 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 248ms (Views: 196.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/1" for ::1 at 2017-04-28 08:48:21 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 244ms (Views: 191.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:48:30 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 243ms (Views: 191.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/new" for ::1 at 2017-04-28 08:48:33 +0530
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (4.0ms)
+  Rendered jobs/new.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 299ms (Views: 247.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for ::1 at 2017-04-28 08:49:28 +0530
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U+/3JOdLOmBKw0+xf9UvESFNdm8gbr/qm5QaiA8clXAvDwuULCl0IMbWaR7f7Am1+uGJrwNHctluVsRApz+Ueg==", "job"=>{"company_name"=>"Cental Governament", "job_title"=>"Juniour Engineer", "job_description"=>"QS &C Engineer in Military engineer service", "salary"=>"35000", "location"=>"India", "contact_email"=>"upsc.gov.in"}, "commit"=>"Create Job"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("company_name", "job_title", "job_description", "salary", "location", "contact_email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_name", "Cental Governament"], ["job_title", "Juniour Engineer"], ["job_description", "QS &C Engineer in Military engineer service"], ["salary", 35000], ["location", "India"], ["contact_email", "upsc.gov.in"], ["created_at", 2017-04-28 03:19:28 UTC], ["updated_at", 2017-04-28 03:19:28 UTC]]
+  [1m[35m (71.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 79ms (ActiveRecord: 72.0ms)
+
+
+Started GET "/jobs/2" for ::1 at 2017-04-28 08:49:28 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 247ms (Views: 193.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:49:34 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 245ms (Views: 194.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/1" for ::1 at 2017-04-28 08:49:40 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 261ms (Views: 209.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:49:45 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 275ms (Views: 217.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/1" for ::1 at 2017-04-28 08:49:47 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 244ms (Views: 192.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:49:53 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 244ms (Views: 192.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/1/edit" for ::1 at 2017-04-28 08:49:55 +0530
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/edit.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.0ms)
+  Rendered jobs/edit.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 303ms (Views: 248.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:49:57 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 248ms (Views: 193.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/1" for ::1 at 2017-04-28 08:49:59 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 247ms (Views: 195.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:50:02 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 245ms (Views: 194.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for ::1 at 2017-04-28 08:50:16 +0530
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (6.0ms)
+  Rendered jobs/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 299ms (Views: 249.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:50:18 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 250ms (Views: 199.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/1" for ::1 at 2017-04-28 08:50:49 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 245ms (Views: 192.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:50:52 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 248ms (Views: 196.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/2" for ::1 at 2017-04-28 08:50:54 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 246ms (Views: 191.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:51:00 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 251ms (Views: 199.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/2" for ::1 at 2017-04-28 08:51:02 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 244ms (Views: 191.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/2/edit" for ::1 at 2017-04-28 08:51:05 +0530
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/edit.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.0ms)
+  Rendered jobs/edit.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 307ms (Views: 252.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/jobs/2" for ::1 at 2017-04-28 08:51:15 +0530
+Processing by JobsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZIYI6wfzEdXOZkGO4E0z8FQX4nfAgkhTvc+ssV0LH8YkzyHLVPqsI4BJlgFZkFsqFulpXIQ7yflw1v20nipyYg==", "job"=>{"company_name"=>"Cental Governament", "job_title"=>"Junior Engineer", "job_description"=>"QS &C Engineer in Military engineer service", "salary"=>"35000", "location"=>"India", "contact_email"=>"upsc.gov.in"}, "commit"=>"Update Job", "id"=>"2"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "jobs" SET "job_title" = ?, "updated_at" = ? WHERE "jobs"."id" = ?[0m  [["job_title", "Junior Engineer"], ["updated_at", 2017-04-28 03:21:15 UTC], ["id", 2]]
+  [1m[35m (118.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 128ms (ActiveRecord: 119.0ms)
+
+
+Started GET "/jobs/2" for ::1 at 2017-04-28 08:51:15 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 247ms (Views: 195.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:51:19 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 246ms (Views: 195.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:51:29 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 246ms (Views: 193.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/2" for ::1 at 2017-04-28 08:58:13 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 247ms (Views: 195.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:58:19 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 267ms (Views: 201.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/2/edit" for ::1 at 2017-04-28 08:58:21 +0530
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/edit.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.0ms)
+  Rendered jobs/edit.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 300ms (Views: 245.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/2" for ::1 at 2017-04-28 08:58:29 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 247ms (Views: 195.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:58:36 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 258ms (Views: 206.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/new" for ::1 at 2017-04-28 08:58:39 +0530
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (4.0ms)
+  Rendered jobs/new.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 301ms (Views: 248.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 08:58:44 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 261ms (Views: 195.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 09:04:04 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 261ms (Views: 210.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs/1" for ::1 at 2017-04-28 09:04:09 +0530
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering jobs/show.html.erb within layouts/application
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 257ms (Views: 206.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for ::1 at 2017-04-28 09:04:13 +0530
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 276ms (Views: 220.3ms | ActiveRecord: 0.0ms)
+
+
